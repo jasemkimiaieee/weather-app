@@ -141,7 +141,6 @@ window.addEventListener("load", async () => {
 
   const baseUrl = "https://api.openweathermap.org/data/2.5";
   const apiKey = "0c74de3236eb4855294c992f0130cf03";
-  const difulteCity = "tehran";
 
   const getWeather = async (endPoint = "weather", city) => {
     const url = `${baseUrl}/${endPoint}?q=${city}&units=metric&lang=en&appid=${apiKey}`;
@@ -332,10 +331,7 @@ window.addEventListener("load", async () => {
     pageLoaded(searchInput.value);
   });
 
-  const resopns = await fetch("https://ip-api.com/json/");
-  const data = await resopns.json();
-  const { city } = data;
-
-  pageLoaded(city);
+  pageLoaded("tehran");
 });
+
 
