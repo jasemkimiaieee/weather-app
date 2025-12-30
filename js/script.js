@@ -332,9 +332,10 @@ window.addEventListener("load", async () => {
     pageLoaded(searchInput.value);
   });
 
-  const resopns = await fetch("http://ip-api.com/json/");
+  const resopns = await fetch("https://ip-api.com/json/");
   const data = await resopns.json();
   const { city } = data;
 
   pageLoaded(city);
 });
+
